@@ -15,7 +15,7 @@
             $producto = new ProductoModel();
             $listaProductos = $producto->listar();
 
-            require_once('views/header.html');
+            require_once('views/header.php');
             require_once('views/productosView.php');
             require_once('views/footer.html');
 

@@ -2,7 +2,10 @@
     class indexController{
 
         public function index(){
-            require_once('views/header.html');
+            session_start();
+            //print_r($_SESSION);
+            $correo = $_SESSION['correo'];
+            require_once('views/header.php');
             require_once('views/home.html');
             
             //echo '<h1> Home del controller</h1>';
