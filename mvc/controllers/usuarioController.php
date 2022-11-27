@@ -16,7 +16,7 @@
            
             require_once('views/header.php');
             
-            require_once('login.php');
+            require_once('views/login.html');
      
             require_once('views/footer.html');
             

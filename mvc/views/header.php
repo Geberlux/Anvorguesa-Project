@@ -47,13 +47,13 @@
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link" href="usuario">Loguear</a>
+                      <a class="nav-link" href="usuario">Login</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="usuario/logout">logout</a>
                   </li>
                   <li class="nav-item" >
-                     <a class="nav-link" href="">Bienvenido <?php echo $correo ?>  </a>
+                     <a class="nav-link" href=""> <?php echo $correo ?>  </a>
                  </li>
       </ul>
       

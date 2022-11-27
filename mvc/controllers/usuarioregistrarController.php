@@ -11,7 +11,7 @@
         public function index( $parametros = array() ){
             require_once('views/header.php');
 
-            require_once('registrar.php');
+            require_once('views/registrar.html');
      
             require_once('views/footer.html');
 
