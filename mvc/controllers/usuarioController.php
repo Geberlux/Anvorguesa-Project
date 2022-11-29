@@ -74,10 +74,35 @@
             // Ejecuto las querys
         }
 
-        public function actualizar($parametros = array()){
-            print_r( $parametros  );
-            echo 'Actulizando';
+         public function actualizar($parametros = array()){
+            session_start();
+            //print_r($_SESSION);
+            $correo = $_SESSION['correo'];
+            $rol_id_rol = $_SESSION['rol_id_rol'];
+            //$id_usuario = $_SESSION['id_usuario'];
+            
+            
+            if(isset ($_POST ['nombre']) && isset ($_POST ['apellido']) && isset ($_POST ['contrasenia'])) {
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];                
+                $contrasenia = $_POST['contrasenia']; 
+                
+                
+                $usuarioModificar = new usuarioModel();
+                $usuarioModificar -> setNombre($nombre);
+                $usuarioModificar -> setApellido($apellido);
+                $usuarioModificar -> setCorreo($correo);
+                $usuarioModificar -> setContrasenia($contrasenia);
+                
+
+                $usuarioModificar -> modificar();
+                //print_r ($usuarioModificar);
+                
+            }   
+            echo('<meta http-equiv="refresh" content="3; url=../index.php">');
+            echo( '<h2> Cuenta Modificada, en 3 segundo...</h2>');      
         }
+      
 
         public function eliminar( $parametros = array() ){
             print_r( $parametros  );
