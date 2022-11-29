@@ -42,6 +42,20 @@
 
             return $resultado;
         }
+        
+        public function modificar(){
+            $this->setQuery("UPDATE usuario SET nombre=:nombre,apellido=:apellido
+            ,contrasenia=:contrasenia WHERE correo=:correo");
+                $this->ejecutar(array(
+                ':nombre' => $this->nombre,
+                ':apellido' => $this->apellido,
+                ':correo' => $this->correo,
+                ':contrasenia' => $this->contrasenia
+                              
+            ));
+            
+            
+        }
 
         public function getNombre() {
             return $this->nombre;
