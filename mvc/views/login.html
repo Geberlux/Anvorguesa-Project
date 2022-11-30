@@ -1,31 +1,44 @@
 <main >
+        
     <div class="container">
-        <form name="fvalida" method="post" action="usuario/login"  >
+        <div class="row">
+            <div class="col-5">
 
-            <div>
-        
-                <label for="correo" class="form-label">Correo:</label> </br>
-                <input name="correo" type="email" id="correo" aria-describedby="emailHelp" required />
-        
             </div>
+            <div class="col-2">
+                <div class="padreado">
+                    <form name="fvalida" method="post" action="usuario/login" id="topardo2">
+
+                        <div>
+                    
+                            <label for="correo" class="form-label">Correo:</label> </br>
+                            <input name="correo" type="email" id="correo" aria-describedby="emailHelp" required />
+                    
+                        </div>
+                            
+                        <div>
+                            
+                            <label for="contrasenia">Contraseña:</label></br>
+                            <input id="contrasenia" type="password" name="contrasenia" required />
+                        
+                        </div>
                 
-            <div>
                 
-                <label for="contrasenia">Contraseña:</label></br>
-                <input id="contrasenia" type="password" name="contrasenia" required />
-            
+                    <button type="submit" class="btn btn-primary" value="Loguear" >Ingresar</button>
+                    <!--<input type="submit" value="Enviar"  onclick="valida_envia()"/> -->
+                    <ul>¿No tenés cuenta?<br>
+                        <a href="usuarioregistrar">¡Registrate!</a>
+                    </ul>
+                
+                
+                    
+                    
+                    </form>
+                </div>
             </div>
-    
-    
-        <button type="submit" class="btn btn-primary" value="Loguear" >Ingresar</button>
-        <!--<input type="submit" value="Enviar"  onclick="valida_envia()"/> -->
-        <ul>¿No tenés cuenta?<br>
-            <a href="usuarioregistrar">¡Registrate!</a>
-        </ul>
-    
-    
-        
-        
-        </form>
+            <div class="col-5">
+
+            </div>
+        </div>
     </div>
 </main>

@@ -59,7 +59,11 @@ gap: 25px;
     overflow: auto;
   }
 #topardo{
-    margin-top: 30px;
+    padding-top: 5em;
+  }
+#topardo2{
+    padding-top: 9em;
+    align-content: center;
   }
 
 .imagensn{
@@ -77,4 +81,10 @@ gap: 25px;
 }
 .correoo{
     width: 10px;
+}
+hr{
+    border-top: 2px solid gray
+}
+.padreado{
+    padding-bottom: 33em;
 }

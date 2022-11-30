@@ -6,7 +6,7 @@
             //print_r($_SESSION);
             $correo = $_SESSION['correo'];
             require_once('views/header.php');
-            require_once('views/contacto.html');
+            require_once('views/contacto.php');
             
             //echo '<h1> Home del controller</h1>';
             require_once('views/footer.html');
