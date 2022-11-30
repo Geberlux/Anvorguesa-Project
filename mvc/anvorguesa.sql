@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2022 a las 20:04:05
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.1
+-- Tiempo de generación: 30-11-2022 a las 17:17:57
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,10 +54,10 @@ CREATE TABLE `pedido` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL,
-  `nombre_prod` varchar(45) NOT NULL,
+  `nombre_prod` varchar(100) NOT NULL,
   `precio` double NOT NULL,
-  `img` varchar(45) NOT NULL,
-  `descripcion` varchar(45) NOT NULL
+  `img` varchar(100) NOT NULL,
+  `descripcion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -65,9 +65,9 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id_producto`, `nombre_prod`, `precio`, `img`, `descripcion`) VALUES
-(1, 'anvorguesa 1', 500, 'public/img/hamburger-3.png', 'algo'),
-(2, 'anvorguesa 1', 500, 'public/img/hamburger-3.png', 'algo dasd asdkaskdj hs a'),
-(3, 'anvorguesa 1', 500, 'public/img/hamburger-3.png', 'algo');
+(1, 'Hamburguesa Kebab', 850, 'public/img/kebab-1.png', 'Hamburguesa de pollo con jamon queso tomate lechuga.'),
+(2, 'Hamburguesa Clásica', 700, 'public/img/hamburger1.png', 'Hamburguesa con lechuga tomate pepino cebolla queso chedar y una salsa muy especial.'),
+(3, 'Hamburguesa Simple', 500, 'public/img/hamburger2.png', 'Hamburguesa con pepino doble queso chedar cebolla mayonesa y kechup.');
 
 -- --------------------------------------------------------
 
@@ -79,6 +79,14 @@ CREATE TABLE `rol` (
   `id_rol` int(11) NOT NULL,
   `nombre_rol` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`id_rol`, `nombre_rol`) VALUES
+(1, 'Admin'),
+(2, 'Usuario');
 
 -- --------------------------------------------------------
 
@@ -95,6 +103,16 @@ CREATE TABLE `usuario` (
   `dni` int(11) NOT NULL,
   `rol_id_rol` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `correo`, `contrasenia`, `dni`, `rol_id_rol`) VALUES
+(1, 'Heber Lucio', 'Martínez López', 'heber@hotmail.com', '1234', 41154456, 2),
+(2, 'Heber', 'Martinez', 'heberlucio99@live.com.ar', 'admin1234', 41948027, 1),
+(9, 'Santiago', 'Naya', 'Santiago@hotmail.com', '1234', 41589465, 1),
+(10, 'Juan', 'Pilato', 'jesusirl@judas.com', 'jesus', 11111111, 2);
 
 --
 -- Índices para tablas volcadas
@@ -160,13 +178,13 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
