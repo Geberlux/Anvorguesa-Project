@@ -1,27 +1,55 @@
 <?php
-    class contactoController{
 
-        public function index(){
+   
+    require_once('models/contactoModel.php');
+
+
+    class ContactoController{
+        public $nombre;
+        public $idProducto;
+
+
+        public function index( $parametros = array() ){
             session_start();
             //print_r($_SESSION);
             $correo = $_SESSION['correo'];
+            $producto = new ContactoModel();
+            $listaProductos = $producto->listar();
+
             require_once('views/header.php');
             require_once('views/contacto.php');
-            
-            //echo '<h1> Home del controller</h1>';
             require_once('views/footer.html');
 
+
         }
 
-        public function loguear(){
-            echo '<h2> inciando login</h2>';
+
+        public function listar( $parametros = array() ){
+            echo 'Ahora vamos a listar la categoria ';
+            print_r($parametros);
+
+
         }
 
-        public function logout(){
-            echo '<h2> Finalizando sesion</h2>';
+        public function crear( $parametros = array() ){
+            // Recibo las variables por POST
+            print_r( $parametros  );
+            echo 'Crear usuario';
+
+            // Intancio el modelo 
+
+            // Ejecuto las querys
         }
 
+        public function actualizar($parametros = array()){
+            print_r( $parametros  );
+            echo 'Actulizando';
+        }
+
+        public function eliminar( $parametros = array() ){
+            print_r( $parametros  );
+            echo 'Eliminando usuario';
+        }
     }
-
 
 ?>

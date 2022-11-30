@@ -1,6 +1,10 @@
+
+</main>
 <main id="recibir">
-    <html>
-    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <section id="paddeado">
 
 <h1>Gracias por ponerse en contacto</h1>
 
@@ -33,7 +37,7 @@
     $comentario = $_POST["comentario"];
 
 
-    $cuerpo = "Consulta recibida de ".$_POST["nombre1"]." ".$_POST["apellido1"]. " su mail es ".$_POST["email"]. " su opción elegida fue: ".$_POST["opciones"]. " y su mensaje fue: ".$_POST["comentario"]; //En esta variable guardamos todo lo que ingreso el usuariio para mostrarlo en el cuerpo del correo
+    $cuerpo = "Consulta recibida de ".$_POST["nombre1"]." ".$_POST["apellido1"]. ", su mail es ".$_POST["email"]. ", su opción elegida fue: ".$_POST["opciones"]. " y su mensaje fue: ".$_POST["comentario"]; //En esta variable guardamos todo lo que ingreso el usuariio para mostrarlo en el cuerpo del correo
 
     $cabeceras = "From: $nombre1 $apellido1 <$email>";
 
@@ -56,6 +60,8 @@
 
 
 </section>
+            </div>
+        </div>
+    </div>
 
-    </html>
 </main>
