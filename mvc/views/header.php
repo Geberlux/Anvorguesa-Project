@@ -21,7 +21,7 @@
 
 <body class="fondo-imagen">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark negroo ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
               <a class="navbar-brand" href="usuario"><img src="public/img/anvorguesa2_2.png" alt="Logo de la empresa, dice XPerience" height="43" width="43"> <p class="lobster">Anvorguesa</p></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
